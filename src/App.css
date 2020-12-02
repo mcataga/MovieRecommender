@@ -1,16 +1,12 @@
 .app-header{
     display: flex;
     justify-content: center;
-    border-bottom: solid;
-    width: 103%;
+    width: 50%;
     background-color: lightblue;
     justify-content: center;
-    border-bottom: solid;
-    border-color: gray;
-    padding: 5px;
-    margin-left: -10px;
-    margin-top: -10px;
+    margin-left: 480px;
     margin-top: 10px;
+    border-radius: 12px;
   }
 
   .main-container-box{
@@ -20,18 +16,20 @@
 
   .container-box{
     display: flex;
+    width: 50%;
     justify-content: center;
     border-style: solid;
-    margin-left: 20px;
-    margin-top: 20px;
-    height: 100px;
+    margin-left: 480px;
+    margin-top: 30px;
+    margin-right: 20px;
+    height: 70px;
     border-width: 1px;
     border-radius: 12px;
   }
 
   .flexbox-container{
     display: flex;
-    width: 100%;
+    width: 50%;
     justify-content: center;
     margin-right: 20px;
     padding-left: 10px;
@@ -44,14 +42,15 @@
     display: flex;
     color: black;
     justify-content: center;
-    border-bottom: solid;
-    width: 100%;
+    border-style: solid;
+    width: 20%;
     text-align: center;
-    padding-bottom: 17px;
+    margin-left: 780px;
+    padding-bottom: 12px;
     padding-top: 10px;
-    height: 20px;
-    background-color: lightgray;
-    font-size: 25px;
+    margin-top: 15px;
+    background-color: white;
+    font-size: 20px;
     border-radius: 10px;
 }
 
@@ -64,34 +63,33 @@
     text-align: center;
     padding-left: 50px;
     margin-right: 200px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    margin-top: 42px;
-    height: 20px;
+    padding-bottom: 5px;
+    padding-top: 15px;
+    margin-top: 20px;
     background-color: lightgray;
     font-size: 20px;
     border-radius: 10px;
 }
 
-.rating-field{
-  display: flex;
-  color:black;
-  justify-content: center;
-  padding-top: 12px;
-  font-size: 10px;
-}
-
 .rating-container{
   display: flex;
-  flex-direction: row;
+  margin-left: 118px;
 }
 
 .individual-rate-box{
   display: flex;
   border-style: solid;
   border-color: black;
-  margin-top: 23px;
+  margin-top: 17px;
   margin-right: 10px;
   border-width: 2.2px;
-  padding: 2px;
+  padding: 5px;
+  font-size: 15px;
+  border-radius: 8px;
+}
+
+.card-container{
+  display: flex;
+  padding-top: 15px;
+  padding-left: 730px;
 }
