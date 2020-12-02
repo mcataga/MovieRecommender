@@ -93,3 +93,15 @@
   padding-top: 15px;
   padding-left: 730px;
 }
+
+.nav-container{
+  display: flex;
+  padding: 2px;
+  margin: 2px;
+  margin-left: 20px;
+}
+
+.calc-button{
+  display: flex;
+  margin-left: 20px;
+}

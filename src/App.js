@@ -5,28 +5,14 @@ import MovieBox from './components/MovieBox';
 import RatingBox from './components/RatingBox';
 import * as ReactBootStrap from "react-bootstrap";
 import Form2 from './Form2';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import NavBar from './NavBar';
+import {Route, BrowserRouter as Router} from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 function App() {
   return (
     <div>
-      <ReactBootStrap.Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <ReactBootStrap.Navbar.Brand href="#home">Sample Text</ReactBootStrap.Navbar.Brand>
-      <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
-      <ReactBootStrap.Nav className="mr-auto">
-        <Router>
-          <ReactBootStrap.Nav.Link href="/form1">Form 1</ReactBootStrap.Nav.Link>
-          <Link to="/form2">
-            <ReactBootStrap.Nav.Link href="/form2">Form 2</ReactBootStrap.Nav.Link>
-          </Link>
-          <Route path="/form2" component={Form2}/>
-        </Router>
-      </ReactBootStrap.Nav>
-      </ReactBootStrap.Navbar.Collapse>
-      </ReactBootStrap.Navbar>
-      
+      <NavBar/>
       <div className="App">
         <header className="app-header">
           <h1>Recommender User Interface</h1>
