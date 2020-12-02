@@ -5,6 +5,7 @@ import * as ReactBootStrap from "react-bootstrap";
 function Form2() {
   return (
       <div className="nav-container">
+        <div className ="centerFriends">
         <ReactBootStrap.Dropdown>
         <ReactBootStrap.Dropdown.Toggle variant="success" id="dropdown-basic">
             Choose User Dropdown Menu
@@ -17,6 +18,7 @@ function Form2() {
         </ReactBootStrap.Dropdown>
         <ReactBootStrap.Button className="calc-button" as="input" type="button" value="Run Calculations" />{' '}
       </div>
+    </div>
   );
 }
 

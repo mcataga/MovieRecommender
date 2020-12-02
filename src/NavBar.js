@@ -13,13 +13,12 @@ function Body(){
             <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
             <ReactBootStrap.Nav className="mr-auto">
-                <Router>
-                <ReactBootStrap.Nav.Link href="/home">Home</ReactBootStrap.Nav.Link>
+            <Link to="/calcs">
+                <ReactBootStrap.Nav.Link href="/calcs">Home</ReactBootStrap.Nav.Link>
+            </Link>
                 <Link to="/form2">
-                    <ReactBootStrap.Nav.Link href="/calculations">Calculations</ReactBootStrap.Nav.Link>
+                    <ReactBootStrap.Nav.Link href="/form2">Calculations</ReactBootStrap.Nav.Link>
                 </Link>
-                <Route path="/form2" component={Form2}/>
-                </Router>
             </ReactBootStrap.Nav>
             </ReactBootStrap.Navbar.Collapse>
             </ReactBootStrap.Navbar>
