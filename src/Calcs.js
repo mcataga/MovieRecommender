@@ -10,7 +10,7 @@ constructor(props) {
     this.state = {
         position: [],
         data: [],
-        recommendedMovies: [],
+        recommendedMovies : [],
         values: [],
         isVisible: true
 
@@ -31,7 +31,7 @@ constructor(props) {
         console.log(e + " " + i  )
     }
     test(item, i) {  
-        if ((i> -1 && i < 4) ||(i> 6 && i < 11)||(i> 13 && i < 18)||(i> 20 && i < 25)||(i> 27 && i < 32)){
+        if ((i> -1 && i < 3) ||(i> 6 && i < 10)||(i> 13 && i < 17)||(i> 20 && i < 24)||(i> 27 && i < 31)){
         return  (                
         <div className="card-container">
         <Card style={{ width: '30rem' }} >
@@ -49,23 +49,7 @@ constructor(props) {
         )
     }
 }
-test2(item, i) {  {
-    return  (                
-    <div className="card-container">
-    <Card style={{ width: '30rem' }} >
-        {/* {console.log(item + " " + i)}        */}
-    <Card.Body>
-    <Card.Img variant="top" src={process.env.PUBLIC_URL + '/'+(i)+'.jpg'} ></Card.Img>
-        <Card.Title>{movieList[i]}</Card.Title>
-        <Card.Text>
-        The Sim score for this move is {item}
-        </Card.Text>
-    </Card.Body>
-    </Card>
-    </div>
-    )
-}
-}
+
 
 displayData = () => {
     console.log(this.state.data);
@@ -135,21 +119,24 @@ displayData = () => {
     }
 
     let mapSorted = new Map([...predictedRatingForMovie.entries()].sort((a, b) => b[1] - a[1]));
-
+    let recommendedMovies1 = [];
+    let values1 = [];
     //mapSorted = filterRatingsAboveFour(mapSorted);
     mapSorted.forEach( (value, key) => {
         console.log("Predicted Rating for Movie " + movieList[key] + " is " + value);
-        this.setState(state => {
-            const recommendedMovies = [...state.recommendedMovies, value];
-            const values = [...state.values, key];
-            console.log(recommendedMovies + "THIS recommded");
-            return {
-              recommendedMovies, 
-              values,
-            }
-          });
+        recommendedMovies1.push(key);
+        values1.push(value);
     });
-    
+    this.setState({ 
+        recommendedMovies: [...this.state.recommendedMovies, ...recommendedMovies1],
+        values: [...this.state.values, ...values1]
+     }, () => {
+        this.setState({ 
+            isVisible: false
+         }, () => {
+             console.log("yay concurrency");
+         })
+      }); 
     //findSimilarity(ratings[0],testuserrating);
     // console.log("Content Profile: " + getUserContentProfile(userInput));
     //document.getElementById("btnLoad").disabled = "true";
@@ -294,20 +281,30 @@ displayData = () => {
         )
     }
     else if (!this.state.isVisible) {
-        return (
+        console.log(this.state.recommendedMovies);
+        return  (                
             <>
             <div className="finesse">
             {
-            this.state.recommendedMovies.forEach((item,i) => (
-                <div key={i}>
-                    {this.test2(item,(i))}
-                    
+            this.state.recommendedMovies.map((item,i) => (
+                <div key={item}>
+                    <div className="card-container">
+            <Card style={{ width: '30rem' }} >
+            <Card.Body>
+            <Card.Img variant="top" src={process.env.PUBLIC_URL + '/'+(item)+'.jpg'} ></Card.Img>
+                <Card.Title>{movieList[item]}</Card.Title>
+                <Card.Text>
+                The Sim score for this move is {this.state.values[i]}
+                </Card.Text>
+            </Card.Body>
+            </Card>
+            </div>
                 </div>
                         )) 
                 }
                 </div> 
             </>
-        )
+            )
     }
 }
 
