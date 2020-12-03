@@ -1,22 +1,24 @@
 import React from 'react';
 import './App.css';
-import * as ReactBootStrap from "react-bootstrap";
+import {movieList, ratings, users} from './data';
+import {Dropdown, Button} from "react-bootstrap";
 
 function Form2() {
   return (
       <div className="nav-container">
         <div className ="centerFriends">
-        <ReactBootStrap.Dropdown>
-        <ReactBootStrap.Dropdown.Toggle variant="success" id="dropdown-basic">
+        <Dropdown>
+        <Dropdown.Toggle variant="success" id="dropdown-basic">
             Choose User Dropdown Menu
-        </ReactBootStrap.Dropdown.Toggle>
-        <ReactBootStrap.Dropdown.Menu>
-            <ReactBootStrap.Dropdown.Item href="#/action-1">User 1</ReactBootStrap.Dropdown.Item>
-            <ReactBootStrap.Dropdown.Item href="#/action-2">User 2</ReactBootStrap.Dropdown.Item>
-            <ReactBootStrap.Dropdown.Item href="#/action-3">User 3</ReactBootStrap.Dropdown.Item>
-        </ReactBootStrap.Dropdown.Menu>
-        </ReactBootStrap.Dropdown>
-        <ReactBootStrap.Button className="calc-button" as="input" type="button" value="Run Calculations" />{' '}
+        </Dropdown.Toggle>
+        <Dropdown.Menu>
+          users.for
+          <div>
+            <Dropdown.Item href="#/action-1">User 1</Dropdown.Item>
+          </div>
+        </Dropdown.Menu>
+        </Dropdown>
+        <Button className="calc-button" as="input" type="button" value="Run Calculations" />{' '}
       </div>
     </div>
   );
