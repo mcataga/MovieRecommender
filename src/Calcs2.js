@@ -1,5 +1,6 @@
 import React from 'react';
 import {Card} from "react-bootstrap";
+import {movieList, ratings} from './data';
 
 class Calcs2 extends React.Component {
 

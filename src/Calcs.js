@@ -140,12 +140,13 @@ displayData = () => {
     mapSorted.forEach( (value, key) => {
         console.log("Predicted Rating for Movie " + movieList[key] + " is " + value);
         this.setState(state => {
-            const recommendedMovies = [...this.state.recommendedMovies, value];
-            const values = [...this.state.values, key];
+            const recommendedMovies = [...state.recommendedMovies, value];
+            const values = [...state.values, key];
+            console.log(recommendedMovies + "THIS recommded");
             return {
               recommendedMovies, 
               values,
-            };
+            }
           });
     });
     
