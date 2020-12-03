@@ -1,19 +1,23 @@
 .app-header{
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    background-color: lightblue;
-    justify-content: center;
-    margin-left: 480px;
-    margin-top: 10px;
-    border-radius: 12px;
+  display: flex;
+  width: 50%;
+  background-color: lightblue;
+  justify-content: center;
+  border-radius: 12px;
+  }
+  .parent-app-header {
+    text-align: -webkit-center;
   }
 
   .main-container-box{
     display: flex;
     justify-content: center;
   }
-
+.finesse{
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;  
+}
   .container-box{
     display: flex;
     width: 50%;
@@ -26,7 +30,10 @@
     border-width: 1px;
     border-radius: 12px;
   }
-
+.BARERATINGSFAM {
+  width: -webkit-fill-available;
+    height: 100px;
+}
   .flexbox-container{
     display: flex;
     width: 50%;
@@ -73,7 +80,7 @@
 
 .rating-container{
   display: flex;
-  margin-left: 118px;
+  justify-content: center;
 }
 
 .individual-rate-box{
@@ -87,11 +94,21 @@
   font-size: 15px;
   border-radius: 8px;
 }
+.nav-container {
+  justify-content: center;
+}
+.centerFriends {
+  display: inline-flex;
+}
+.card-img-top {
+  width: 430px;
+  height: 650px;
+    object-fit: contain;
+}
 
 .card-container{
   display: flex;
-  padding-top: 15px;
-  padding-left: 730px;
+  padding-top: 20px;
 }
 
 .nav-container{
@@ -100,7 +117,9 @@
   margin: 2px;
   margin-left: 20px;
 }
-
+.YERRRRRR{
+  text-align: center;
+}
 .calc-button{
   display: flex;
   margin-left: 20px;
