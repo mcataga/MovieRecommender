@@ -66,11 +66,11 @@ displayData = () => {
     let altonFinesse = [];
 
     for (let i = 0; i <35; i++) {
-        altonFinesse.push(testMap[i]);
-        console.log(testMap[i]);
+        altonFinesse.push(parseInt(testMap[i]));
+        
     }
-    
-
+    console.log(altonFinesse);
+    console.log(testMap.toString() + 'THIS TEST MAP');
     this.doCalcs(altonFinesse);
     
 }
@@ -252,9 +252,15 @@ calcNumAndDen = (ratings1, ratings2, average1, average2) =>   {
 getAverageRating = (ratings) => {
     let sum = 0;
     for (let i = 0; i < ratings.length; i++)    {
-        sum += ratings[i];
+        sum = ratings[i] + sum;
     }
-    return (sum/ratings.length);
+    let average = sum/ratings.length;
+    if (average > 6000) { 
+        console.log(average);
+        console.log("OVCER 6000");
+        console.log(ratings);
+    }
+    return (average);
 }
 
 getRatingsForCommonMovies = (user, commonMovies) => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Form2 from './Form2';
+import {Form2} from './Form2';
 import {Calcs} from './Calcs';
 import Navbar from './NavBar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
