@@ -7,7 +7,7 @@ function Body(){
     return (
         <div className = "Body">
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-            <Navbar.Brand href="#home">Sample Text</Navbar.Brand>
+            <Navbar.Brand href="/">MovieRecommender</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">

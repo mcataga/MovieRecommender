@@ -34,6 +34,13 @@
   width: -webkit-fill-available;
     height: 100px;
 }
+.centerWee1 {
+    text-align: center;
+}
+.centerWee {
+  margin: 10px;
+  text-align: center;
+}
   .flexbox-container{
     display: flex;
     width: 50%;

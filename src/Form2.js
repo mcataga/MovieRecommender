@@ -53,29 +53,40 @@ handleCalculations = () => {
       );
         }
      else if (this.state.calculate) {
-      return  (                
-        <>
-        <div className="finesse">
-        {
-        this.state.recommendedMovies.map((item,i) => (
-            <div key={i}>
-                <div className="card-container">
-        <Card style={{ width: '30rem' }} >
-        <Card.Body>
-        <Card.Img variant="top" src={process.env.PUBLIC_URL + '/'+(item)+'.jpg'} ></Card.Img>
-            <Card.Title>{movieList[item]}</Card.Title>
-            <Card.Text>
-            Your predicted rating for this movie is {this.state.values[i]}
-            </Card.Text>
-        </Card.Body>
-        </Card>
-        </div>
+        return  (                
+            <>
+            <h1 className="centerWee1">{this.users[this.state.position] + '\'s Ratings'}</h1>
+            <div className="finesse">
+            { this.ratings[this.state.position].filter(item => item !=-1).map((item, i) => (
+            <Card style={{ width: '18rem' }} key={i}>
+                <Card.Body>
+                    <Card.Title>{this.movieList[i]}</Card.Title>
+                    <Card.Text className="mb-2 text-muted">{this.users[this.state.position] +' rated this movie a ' + item}</Card.Text>
+                </Card.Body>
+            </Card>
+            ))}
             </div>
-                    )) 
-            }
-            </div> 
-        </>
-        )
+            <h2 className="centerWee">Based on your ratings we'd recommend these movies...</h2>
+            <div className="finesse">
+            {
+            this.state.recommendedMovies.map((item,i) => (
+                <div key={i}>
+                    <div className="card-container">
+            <Card style={{ width: '30rem' }} >
+            <Card.Body>
+            <Card.Img variant="top" src={process.env.PUBLIC_URL + '/'+(item)+'.jpg'} ></Card.Img>
+                <Card.Title>{movieList[item]}</Card.Title>
+                <Card.Text>
+                Your predicted rating for this movie is {this.state.values[i]}
+                </Card.Text>
+            </Card.Body>
+            </Card>
+            </div>
+                </div>
+                        )) }
+                </div> 
+            </>
+            )
       }
     }
     doCalcs = (userInput) => {

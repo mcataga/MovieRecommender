@@ -14,6 +14,7 @@ function App() {
           <h1 className="app-header">Recommender User Interface</h1>
         </header>
         <Switch>
+          <Route path='/' exact component={Calcs} />
           <Route exact path='/newCalc' component={Calcs} />
           <Route path='/existingCalc' component={Form2} />
         </Switch>
