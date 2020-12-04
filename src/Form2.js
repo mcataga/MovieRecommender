@@ -57,8 +57,10 @@ handleCalculations = () => {
             <>
             <h1 className="centerWee1">{this.users[this.state.position] + '\'s Ratings'}</h1>
             <div className="finesse">
-            { this.ratings[this.state.position].filter(item => item !=-1).map((item, i) => (
+            { this.ratings[this.state.position].filter(item => item !== -1 ).map((item, i) => (
+                
             <Card style={{ width: '18rem' }} key={i}>
+                { console.log('num: '+ i + ' movietitle: ' + this.movieList[i]) }
                 <Card.Body>
                     <Card.Title>{this.movieList[i]}</Card.Title>
                     <Card.Text className="mb-2 text-muted">{this.users[this.state.position] +' rated this movie a ' + item}</Card.Text>
