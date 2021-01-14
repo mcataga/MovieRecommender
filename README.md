@@ -3,11 +3,11 @@ a Movie recommender using relative ratings based on existing users within the sy
 ## Screenshots
 
 User Interface
-![User Interface](/images/UserInterface.png)
+![User Interface](/images/UserInterface.PNG)
 
 Rating the movies and submitting
-![Rating Movies](/images/RatingMovies.png)
+![Rating Movies](/images/RatingMovies.PNG)
 
 Recommended movies
-![Recommended Movies](/images/RecommendedMovies.png)
+![Recommended Movies](/images/RecommendedMovies.PNG)
 
