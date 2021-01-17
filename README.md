@@ -1,5 +1,6 @@
 # MovieRecommender created by Mico Cataga, Alton Dulinen, MD(Siam) Rahman
-a Movie recommender using relative ratings based on existing users within the system
+A Movie recommender using relative ratings based on existing users within the system
+
 ## Screenshots
 
 User Interface
